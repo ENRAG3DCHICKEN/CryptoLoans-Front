@@ -3,6 +3,9 @@ import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link } from "react-router-dom"
 
+import { Image } from "react-bootstrap"
+import logo from '../assets/kaido-logo-bg-light.jpg'
+
 export default function ForgotPassword() {
   const emailRef = useRef()
   const { resetPassword } = useAuth()
@@ -30,6 +33,9 @@ export default function ForgotPassword() {
     <>
       <Card>
         <Card.Body>
+
+        <Image src={logo} alt="Logo" width={200} height={40}></Image>
+
           <h2 className="text-center mb-4">Password Reset</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           {message && <Alert variant="success">{message}</Alert>}
