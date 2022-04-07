@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './components/App';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-// Added Create React App Buildpack on Heroku 
+// Added Create React App Buildpack on Heroku (via Settings on Heroku Site)
+// Buildpack for React App
+// https://buildpack-registry.s3.amazonaws.com/buildpacks/mars/create-react-app.tgz
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,7 +15,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
